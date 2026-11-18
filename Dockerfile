@@ -1,0 +1,4 @@
+FROM nginx
+RUN rm -rf /user/share/nginx/html/
+RUN echo "<h1>HI , iam running 0.1.0 version </h1>" > /user/share/nginx/html/
+
