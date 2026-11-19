@@ -14,8 +14,8 @@ spec:
   template:
     metadata:
       labels:
-       version: blue
-      app: nginx
+        version: blue
+        app: nginx
     spec:
       containers:
       - name: nginx
