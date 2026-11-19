@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-green
+  labels:
+    Version: green
+    api: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      Version: green
+      api: nginx
+  template:
+    metadata:
+      labels:
+       Version: green
+      api: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: manigangisetty/blue-green:0.2.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+---
