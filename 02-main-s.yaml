@@ -4,13 +4,14 @@ metadata:
   name: nginx
   # servicer labels
   # labels:
-  app: nginx
-  version: blue
+  #   app: nginx
+  #   version: blue
 spec:
   type:  LoadBalancer
   selector:
-    Version: blue
-    api: nginx
+    app: nginx
+    version: blue
+
   ports:
     - protocol: TCP
       port: 80
